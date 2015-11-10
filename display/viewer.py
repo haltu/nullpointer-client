@@ -11,12 +11,14 @@ import logging
 from media import Media
 from browser import Browser
 from video_player import VideoPlayer
+from image_viewer import ImageViewer
 
 
 class Viewer(object):
 
     DISPLAY_TIME_GRANULARITY = 1  # seconds
     BROWSER = Browser()
+    IMAGE_VIEWER = ImageViewer()
     PLAYER = VideoPlayer()
 
     VIEWERS = {
