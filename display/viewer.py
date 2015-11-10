@@ -22,7 +22,7 @@ class Viewer(object):
     PLAYER = VideoPlayer()
 
     VIEWERS = {
-        Media.IMAGE: BROWSER,
+        Media.IMAGE: IMAGE_VIEWER,
         Media.WEB_PAGE: BROWSER,
         Media.VIDEO: PLAYER
     }

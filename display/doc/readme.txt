@@ -4,6 +4,7 @@ Requirements:
 - matchbox_window_manager (sudo apt-get install matchbox-window-manager)
 - xinit (sudo apt-get install xinit)
 - sh v 1.11 (sudo pip install sh)
+- fbi (sudo apt-get install fbi)
 
 To test the viewer in the regular desktop environment, you can just run:
 
