@@ -18,10 +18,11 @@ class ImageViewer(object):
         assert content.content_type == Media.IMAGE
         logging.debug('ImageViewer receiving content %s', content)
         uri = content.content_uri
-	disp_no = os.getenv("DISPLAY")
-	logging.debug("Display number: {0}".format(disp_no))
-        self.process = sh.fim('-d', '/dev/fb' + str(disp_no), 
+        disp_no = os.getenv("DISPLAY")
+        logging.debug("Display number: {0}".format(disp_no))
+        self.process = sh.fim('-d', '/dev/fb' + str(disp_no),
                               '-T', '--noverbose','1', '-a', uri, _bg=False)
+
 
     # Cannot really hide player, must shut down
     def hide(self):
@@ -41,7 +42,7 @@ class ImageViewer(object):
             sh.pgrep('fim', _out=kill)
 
     def is_alive(self):
-	if self.process is None:
+        if self.process is None:
             return False
         else:
             return self.process.process.exit_code is None
