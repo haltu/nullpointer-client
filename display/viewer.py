@@ -17,13 +17,13 @@ from image_viewer import ImageViewer
 class Viewer(object):
 
     DISPLAY_TIME_GRANULARITY = 1  # seconds
-    BROWSER = Browser()
+#    BROWSER = Browser()
     IMAGE_VIEWER = ImageViewer()
     PLAYER = VideoPlayer()
 
     VIEWERS = {
         Media.IMAGE: IMAGE_VIEWER,
-        Media.WEB_PAGE: BROWSER,
+#        Media.WEB_PAGE: BROWSER,
         Media.VIDEO: PLAYER
     }
 
@@ -51,6 +51,6 @@ class Viewer(object):
     def shutdown(self):
         logging.debug('Viewer shutdown requested')
         self.running = False
-        self.BROWSER.shutdown()
+ #       self.BROWSER.shutdown()
         self.PLAYER.shutdown()
         logging.debug('Viewer shutdown complete')
