@@ -14,17 +14,19 @@ from optparse import OptionParser
 
 APT_REQS = (
     'python-pip',
+    'libffi-dev',
+    'libssl-dev',
     'matchbox-window-manager',
     'uzbl',
     'xinit',
     'x11-xserver-utils',
     'supervisor',
-	'omxplayer'
+    'omxplayer'
 )
 
 PIP_REQS = (
     'sh==1.11',
-    'requests'
+    'requests[security]'
 )
 
 DEVNULL = open(os.devnull, 'wb')
